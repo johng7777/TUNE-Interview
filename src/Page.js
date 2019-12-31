@@ -1,9 +1,11 @@
 import React from 'react'
+import {Profile} from './Profile.js'
 
-class Page {
+export class Page extends React.Component {
     constructor() {
-        this.props.lazyLoad = true;
-        this.props.columns = {
+        super();
+        this.lazyLoad = true;
+        this.columns = {
             "number": 3,
             "width": "300px",
         }
@@ -11,7 +13,9 @@ class Page {
 
     render() {
         return (
-
+            <section>
+                <Profile />
+            </section>
         )
     }
 }

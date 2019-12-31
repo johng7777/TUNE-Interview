@@ -13,6 +13,9 @@ export class Users extends React.Component {
                 this.users[element['id']] = {}
             }
             
+            // Build index of usernames for sorting
+            this.userNames[element['name']] = element['id'];
+
             this.users[element['user_id']]['name'] = element['name']
             this.users[element['user_id']]['occupation'] = element['occupation']
             this.users[element['user_id']]['avatar'] = element['avatar']
@@ -21,6 +24,7 @@ export class Users extends React.Component {
 
     // This checks if data has processed and sets the flag to true
     startProcessing = async() => {
+        this.userNames.sort();
         this.processData().then(() => this.dataProcessed = true)
     }
 

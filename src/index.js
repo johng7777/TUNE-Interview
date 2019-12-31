@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import {Page} from './Page.js'
 
 var style = {
     backgroundColor: 'orange',
@@ -8,9 +9,6 @@ var style = {
 }
 
 ReactDOM.render(
-    <div>
-        <h1>hello world</h1>,
-        
-    </div>
+    <Page />,
     document.getElementById('root')
 )

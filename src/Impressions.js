@@ -14,6 +14,7 @@ export class Impressions extends React.Component {
                 this.impressions[element['user_id']]['revenue'] = 0
             }
             
+            var dayOfMonth = element['time']
             this.impressions[element['user_id']]['impressions']++
             this.impressions[element['user_id']]['revenue'] += element['revenue']
         })

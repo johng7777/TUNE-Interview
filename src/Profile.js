@@ -1,17 +1,17 @@
 import React from 'react'
+import {Users} from './Users.js'
 
-class Profile extends React.Component {
+export class Profile extends React.Component {
+
+
     constructor() {
-        this.props.columns = {
-            "number": 3,
-            "width": "300px",
-        }
-        this.props.border = {
+        super();
+        this.border = {
             "border-style": "solid",
             "border-width": "1px",
             "border-color": "#990000"
         }
-        this.props.profile = {
+        this.profile = {
             "height": "200px",
             "width": "280px"
         }
@@ -19,15 +19,15 @@ class Profile extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <section>
+                <section>
                     <a href={this.props.avatar}></a>
                     <h1>{this.props.name}</h1>
-                </div>
-                <div>
+                </section>
+                <section>
                     {this.props.occupation}
-                </div>
-            </div>
+                </section>
+            </section>
         )
     }
 }
