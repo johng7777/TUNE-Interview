@@ -9,6 +9,6 @@ var style = {
 }
 
 ReactDOM.render(
-    <Page />,
+    <Page msg="hello world" />,
     document.getElementById('root')
 )

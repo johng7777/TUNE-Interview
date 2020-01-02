@@ -1,7 +1,9 @@
-import * as data from './users.json';
+import React from 'react'
+var data = require('./users.json');
 
 export class Users extends React.Component {
     constructor() {
+        super()
         this.users = {};
         this.userNames = [];
         this.dataProcessed = false;
@@ -28,7 +30,7 @@ export class Users extends React.Component {
         this.processData().then(() => this.dataProcessed = true)
     }
 
-    getRecoard = (user_id) => {
+    getRecord = (user_id) => {
        return this.users[user_id] !== undefined ? this.users[user_id] : null
     }
 }

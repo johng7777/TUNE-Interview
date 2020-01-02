@@ -14,6 +14,7 @@ export class Page extends React.Component {
     render() {
         return (
             <section>
+                Hello Page
                 <Profile />
             </section>
         )

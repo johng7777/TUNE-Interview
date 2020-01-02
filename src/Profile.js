@@ -6,6 +6,7 @@ export class Profile extends React.Component {
 
     constructor() {
         super();
+        this.users = new Users();
         this.border = {
             "border-style": "solid",
             "border-width": "1px",
@@ -21,6 +22,7 @@ export class Profile extends React.Component {
         return (
             <section>
                 <section>
+                    Hello Profile
                     <a href={this.props.avatar}></a>
                     <h1>{this.props.name}</h1>
                 </section>
