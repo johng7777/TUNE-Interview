@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Synopsis
 
-## Available Scripts
+This is the code that produces Profiles for user.json and logs.json for the TUNE interview project that remains reasonably close to the project spec.
 
-In the project directory, you can run:
+## Explanation
 
-### `yarn start`
+This was a very fun project. Thank you for the opportunity. I'm very sorry it is probably considered late, but I'm adamant to do it "right" with a reasonable cutoff short of perfection as opposed to "slopping it together"
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I felt it is time to get this into you. Hopefully I'm still qualified to interview. Its been a very busy 3 weeks, nevertheless, I was able to get a considerable portion of 'react' development under my belt. I've never programmed in React before, so that added some challenges, but good ones!
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Some code is not used. I wanted you to see how I create large scoped trees (like Util) and SimplePubSub. I was going to move in that direction, but realized React handles that for this project.
 
-### `yarn test`
+In same line as above statement, I created a scope of components, both visible and invisible, general, and specific to the TUNE project, so you would see how I think. In general, I code that way, trying to create a scope large enough so that if the project were to expand, it would be easy to build both general and specific components and utilities.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I divide components into visible and invisible. Visible might be a paging widget, for example. Invisible might be a routing class, broker that works ajax calls to a REST api, or a pub sub class that serves as a generic messaging system. My goal is to separate out that which is specific for this project with things that any part of the company can use. 
 
-### `yarn build`
+## Known issues
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* I purposely left some console.log statements in so you could easily see the object transformations from the json files to usable objects
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* The Name is not perfectly centered to the image
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* When an image cannot be accessed, whether not found or 'forbidden', the first letter is displayed, but it is not a perfect circle due to the missing image icon.
 
-### `yarn eject`
+* Sort has been started, but not implemented - Time Constraint
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* No unit tests - didn't feel time was warranted
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* I tried to show some cleanup capabalities.. when user.json and logs.json is consumed, my intent is to delete all the data and free up memory. I have not tested whether that actually happens or not
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* No paging widget is created. All date displays on the first page. This is something I would immediately consider as a practical necessity, were this a real company project. If I built a paging widget, I would place it into the general components area so it could be used by any project in the future.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Install
 
-## Learn More
+If you clone the site and run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* npm start
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The site should come up
