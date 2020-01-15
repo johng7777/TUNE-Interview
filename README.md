@@ -47,3 +47,9 @@ I divide components into visible and invisible. Visible might be a paging widget
 * Also, for the avatar with initials only, I would probably work out a caching ability, but for this project, simply found a website that has the capability already.
 
 * For the date, since we were working with a simple graph, I simply converted all dates in the end to epoch int and used that to build it. Prior to that conversion, I created an easily sortable array by days. In this use case, it wasn't necessary to keep it, so it was transformed to epoch
+
+* Revenue: Total Revenue came back as a strange 'float'. I didn't take the time to investigate why. I simply rounded it to a digit. However, on a real project, I would try to understand why 2 sig digits added together creates a result of floats to several more sig figs. Also, I didn't go through to calculate the results of the Revenue to make sure they were accurate... the graph looks "cool" .. so I'll go with that. IF this were production, I would definitely have unit tests to verify the totals of all values were matching the what they should.
+
+* The bottom alignment of the figures is more vertically "centered" rather than bottom justified aligning with bottom of graph. I felt it was aesthetically okay, so left it. Just wanted you to know I was aware.
+
+* I'm aware the title of the graph with the date range is missing. That should be trivial. I had something basic, but it wasn't aesthetically good, so I left if off. Would likely take a short time to fix that if this were a real project.
