@@ -45,3 +45,5 @@ I divide components into visible and invisible. Visible might be a paging widget
 * Data Storage: I simply pulled in both files and used in-memory operations. If this were a production project, I would have considered caching and data storage.
 
 * Also, for the avatar with initials only, I would probably work out a caching ability, but for this project, simply found a website that has the capability already.
+
+* For the date, since we were working with a simple graph, I simply converted all dates in the end to epoch int and used that to build it. Prior to that conversion, I created an easily sortable array by days. In this use case, it wasn't necessary to keep it, so it was transformed to epoch
