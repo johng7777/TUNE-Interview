@@ -2,6 +2,16 @@
 
 This is the code that produces Profiles for user.json and logs.json for the TUNE interview project that remains reasonably close to the project spec.
 
+## Install
+
+If you clone the site and run:
+
+* npm install
+
+* npm start
+
+The site should come up
+
 ## Explanation
 
 This was a very fun project. Thank you for the opportunity. I'm very sorry it is probably considered late, but I'm adamant to do it "right" with a reasonable cutoff short of perfection as opposed to "slopping it together"
@@ -28,14 +38,10 @@ I divide components into visible and invisible. Visible might be a paging widget
 
 * I tried to show some cleanup capabalities.. when user.json and logs.json is consumed, my intent is to delete all the data and free up memory. I have not tested whether that actually happens or not
 
-* No paging widget is created. All date displays on the first page. This is something I would immediately consider as a practical necessity, were this a real company project. If I built a paging widget, I would place it into the general components area so it could be used by any project in the future.
+* No paging widget is created. All data displays on the first page. This is something I would immediately consider as a practical necessity, were this a real company project. If I built a paging widget, I would place it into the general components area so it could be used by any project in the future.
 
-## Install
+* Normally I would have considered mobile devices and at least created scope to handle such. I did not do that for lack of time.
 
-If you clone the site and run:
+* Data Storage: I simply pulled in both files and used in-memory operations. If this were a production project, I would have considered caching and data storage.
 
-* npm install
-
-* npm start
-
-The site should come up
+* Also, for the avatar with initials only, I would probably work out a caching ability, but for this project, simply found a website that has the capability already.
